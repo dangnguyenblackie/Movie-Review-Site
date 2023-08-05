@@ -1,16 +1,15 @@
 package com.dangnp.howardmovie.Controller;
 
 import com.dangnp.howardmovie.Model.Movie;
+import com.dangnp.howardmovie.Model.Review;
 import com.dangnp.howardmovie.Service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -36,5 +35,11 @@ public class MovieController {
     @GetMapping("/{imdbId}")
     public ResponseEntity<Optional<Movie>> getMovieByImdbId(@PathVariable String imdbId){
         return new ResponseEntity<Optional<Movie>>(movieService.getMovieByImdbId(imdbId), HttpStatus.OK);
+    }
+
+    @PostMapping("/get-movie-reviews")
+    public ResponseEntity<List<Review>> getReviewsOfMovie(@RequestBody Map<String, String> payload){
+        return new ResponseEntity<List<Review>>(movieService.getMovieReviews(payload.get("imdbId")),
+                HttpStatus.OK);
     }
 }

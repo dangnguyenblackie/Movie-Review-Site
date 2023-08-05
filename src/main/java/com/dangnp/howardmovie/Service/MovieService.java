@@ -1,6 +1,7 @@
 package com.dangnp.howardmovie.Service;
 
 import com.dangnp.howardmovie.Model.Movie;
+import com.dangnp.howardmovie.Model.Review;
 import com.dangnp.howardmovie.Repository.MovieRepository;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +35,17 @@ public class MovieService {
 
     public Optional<Movie> getMovieByImdbId(String imdbId){
         return movieRepository.findMovieByImdbId(imdbId);
+    }
+
+    public List<Review> getMovieReviews(String imdbId){
+        Optional<Movie> movie = getMovieByImdbId(imdbId);
+
+        if (movie.isEmpty()){
+            System.out.println("Fail");
+            return null;
+        }
+        System.out.println(movie);
+        return movie.get().getReviewIds();
     }
 
 }

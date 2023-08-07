@@ -5,8 +5,6 @@ import com.dangnp.howardmovie.Model.Review;
 import com.dangnp.howardmovie.Repository.MovieRepository;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatusCode;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -47,5 +45,4 @@ public class MovieService {
         System.out.println(movie);
         return movie.get().getReviewIds();
     }
-
 }

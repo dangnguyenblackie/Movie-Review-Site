@@ -14,6 +14,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "api/v1/movies")
+@CrossOrigin(origins = "*")
 public class MovieController {
     MovieService movieService;
 

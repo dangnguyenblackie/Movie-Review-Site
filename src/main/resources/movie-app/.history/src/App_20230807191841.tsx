@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
-import Home from "./components/home/Home.jsx";
+import Home from "./components/home/Home.js";
 import { useEffect, useState } from "react";
 import api from "./api/axiosConfig";
 

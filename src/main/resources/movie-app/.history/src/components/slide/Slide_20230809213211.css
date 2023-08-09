@@ -5,14 +5,11 @@
 
 .movie-poster{
     height: 300px;
-    border: 0.5px solid rgba(255,255,255,0.5);
-    border-radius: 5%;
 }
 
 .movie-poster > img{
     height: 100%;
     width: 100%;
-    border-radius: 5%;
 }
 
 .movie-card-container{
@@ -34,7 +31,6 @@
     top: 200px;
     display: flex;
     justify-content: space-evenly;
-    width: 100%;
     
 }
 

@@ -44,7 +44,7 @@ const Morty = () => {
             src={eye}
             style={{
               top: "58px",
-              right: "68px",
+              right: "-142px",
               transform: `rotate(${coords.deg}deg)`,
             }}
           />
@@ -53,7 +53,7 @@ const Morty = () => {
             src={eye}
             style={{
               top: "47px",
-              right: "1px",
+              right: "-208px",
               transform: `rotate(${coords.deg}deg)`,
             }}
           />
@@ -62,7 +62,7 @@ const Morty = () => {
             src={eye}
             style={{
               top: "-88px",
-              right: "-82px",
+              right: "-291px",
               scale: "115%",
               transform: `rotate(${coords.deg}deg)`,
             }}
@@ -72,7 +72,7 @@ const Morty = () => {
             src={eye}
             style={{
               top: "-90px",
-              right: "-146px",
+              right: "-356px",
               scale: "106%",
               transform: `rotate(${coords.deg}deg)`,
             }}

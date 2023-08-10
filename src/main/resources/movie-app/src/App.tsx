@@ -4,7 +4,7 @@ import Home from "./components/home/Home.jsx";
 import { useEffect, useState } from "react";
 import api from "./api/axiosConfig";
 import "./App.css"
-
+import Header from "./components/header/Header.tsx";
 const App = () => {
 
   const [movies, setMovies] = useState();
@@ -22,11 +22,16 @@ const App = () => {
   }, []);
 
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route path="/" element={<Home movies={movies}/>} />
-      </Route>
-    </Routes>
+    <div className="App">
+      <Header />
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            
+            <Route path="/" element={<Home movies={movies}/>} />
+          </Route>
+        </Routes>
+    </div>
+    
   );
 };
 

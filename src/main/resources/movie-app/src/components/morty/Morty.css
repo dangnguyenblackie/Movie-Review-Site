@@ -3,6 +3,7 @@
     display: grid;
     place-items: center;
     position: relative;
+    scale: 20%;
 }
   
   
@@ -15,4 +16,6 @@
 
 #rick-and-morty-container{
     scale: 20%;
+    max-height: 11%;
+    max-width: 30%;
 }

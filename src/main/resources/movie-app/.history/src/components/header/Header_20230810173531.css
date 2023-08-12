@@ -1,0 +1,8 @@
+#navbarScroll{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-link{
+    width: 100px;
+}

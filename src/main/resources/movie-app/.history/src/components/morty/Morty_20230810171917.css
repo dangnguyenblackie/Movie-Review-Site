@@ -1,0 +1,24 @@
+
+#rick-and-morty-container{
+    display: grid;
+    place-items: center;
+    position: relative;
+    height: ;
+}
+  
+  
+#rick-and-morty-eyes, #rick-and-morty-eyes img{
+    position: absolute;
+    border:1px rgba(255, 255, 255, 0);
+    border-radius: 50%;
+    scale: 103%;
+}
+
+#rick-and-morty-container{
+    scale: 40%;
+    max-height: 10%;
+}
+
+#rick-and-morty-anchor{
+
+}

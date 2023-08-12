@@ -12,8 +12,7 @@ const Trailer = () => {
         controls={true}
         playing={true}
         url={`https://www.youtube.com/watch?v=${key}`}
-        width = '100%' 
-        height='100%'
+        style={{ width: "100%", height: "100%" }}
       />
     ) : null;
 

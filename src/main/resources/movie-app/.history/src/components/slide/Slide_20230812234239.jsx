@@ -24,7 +24,7 @@ const Slide = ({ movies }) => {
                       <h4>{movie.title}</h4>
                     </div>
                     <div className="movie-button-container">
-                      <Link to={`/Trailer/${movie.trailerLink.substring(movie.trailerLink.length - 11)}`}>
+                      <Link>
                       <div className="play-button-container">
                         <FontAwesomeIcon
                           className="play-button-icon"

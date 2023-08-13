@@ -6,6 +6,7 @@ import api from "./api/axiosConfig";
 import "./App.css"
 import Header from "./components/header/Header.tsx";
 import Trailer from "./components/trailer/Trailer.tsx";
+import NotFound from "./components/notFound/NotFound.tsx";
 const App = () => {
 
   const [movies, setMovies] = useState();
@@ -29,6 +30,8 @@ const App = () => {
           <Route path="/" element={<Layout />}>
             <Route path="/" element={<Home movies={movies}/>} />
             <Route path="/Trailer/:ytTrailerId" element={<Trailer />} />
+            <Route path="/Reviews/:movieId" element={<Trailer />} />
+            <Route path="/*" element={<NotFound />} />
           </Route>
         </Routes>
     </div>

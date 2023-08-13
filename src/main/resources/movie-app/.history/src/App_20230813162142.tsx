@@ -28,6 +28,7 @@ const App = () => {
     try {
       const response = await api.get(`/api/v1/movies/${movieId}`);
       setMovie(response.data);
+      console.log(response.data)
       setReviews(response.data.reviewIds);
     } catch (error) {
       console.log(error);

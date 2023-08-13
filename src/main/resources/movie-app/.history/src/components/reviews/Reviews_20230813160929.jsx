@@ -21,7 +21,7 @@ const Reviews = ({ movie, reviews, getMovie, setReviews }) => {
     try {
       const response = await api.post("/api/v1/reviews/add", {
         imdbId: movieId,
-        reviewBody: rev.value,
+        reviewBody: rev,
       });
 
       // Update Reviews
@@ -40,7 +40,7 @@ const Reviews = ({ movie, reviews, getMovie, setReviews }) => {
       <Row>
         <h2>Reviews</h2>
       </Row>
-      <Row className="mt-2">
+      <Row>
         <Col>
           <img src={movie?.poster} alt="Load Failed" />
         </Col>

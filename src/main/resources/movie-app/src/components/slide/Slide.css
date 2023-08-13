@@ -49,11 +49,14 @@
 .movie-button-container{
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
+    width: 400px;
 }
 
-/* .play-button-container{
-
-} */
+.play-button-container{
+    display: flex;
+    align-items: center;
+}
 
 .play-button-icon{
     color: #fff;

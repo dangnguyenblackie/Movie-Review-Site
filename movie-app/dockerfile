@@ -1,6 +1,10 @@
-FROM node:18-alpine
-WORKDIR /front
-COPY . .
-RUN ["npm", "i"]
-EXPOSE 8000
-CMD [ "npm", "run", "dev"]
+# React things
+FROM node:18-alpine AS development
+WORKDIR /app
+COPY . /app
+RUN npm i
+FROM development AS build
+RUN npm run build
+
+# APACHE2:
+FROM nginx:alpine

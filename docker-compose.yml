@@ -1,11 +1,11 @@
 services:
-  front:
-    ports:
-      - 8000:8000
-    working_dir: /front
-    image: dangnguyen1012/movies-front:latest
   back:
     ports:
       - 12000:12000
     working_dir: /back
     image: dangnguyen1012/movies-back:latest
+  front:
+    ports:
+      - 80:80
+    working_dir: /front
+    image: dangnguyen1012/movies-front:latest

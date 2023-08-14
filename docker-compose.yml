@@ -4,7 +4,7 @@ services:
       - 8000:8000
     working_dir: /front
     image: dangnguyen1012/movies-front:latest
-  end:
+  back:
     ports:
       - 12000:12000
     working_dir: /back

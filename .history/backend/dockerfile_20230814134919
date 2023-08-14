@@ -1,0 +1,4 @@
+FROM openjdk:20-alpine
+WORKDIR /back
+COPY target/*.jar .
+

@@ -1,0 +1,5 @@
+FROM openjdk:20-slim
+WORKDIR /back
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} app.jar
+CMD ["java","-jar","/app.jar"]
